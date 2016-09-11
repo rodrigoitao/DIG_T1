@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
@@ -17,35 +17,98 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/album_cover_height"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:scaleType="fitXY" />
+                android:background="@drawable/toshio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_person"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"/>
 
             <TextView
-                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/name_person"
+                android:layout_alignTop="@+id/image_person"
+                android:layout_toEndOf="@+id/image_person"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Nome Teste"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/date_info"
+                android:layout_alignBottom="@+id/image_person"
+                android:layout_alignStart="@+id/name_person"
+                android:text="Info"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/location_info"
+                android:layout_below="@+id/date_info"
+                android:layout_alignStart="@+id/date_info"
+                android:layout_marginTop="2dp"
+                android:text="Andradina"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_person"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:layout_marginTop="30dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thumbnail"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:rating="5"/>
+
+            <TextView
+                android:id="@+id/small_review"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/thumbnail"
+                android:layout_below="@id/ratingBar"
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
                 android:textColor="@color/album_title"
                 android:textSize="@dimen/album_title" />
 
-            <TextView
-                android:id="@+id/count"
-                android:layout_width="match_parent"
+            <Button
+                style="@style/NextThemeButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/title"
-                android:paddingBottom="@dimen/songs_count_padding_bottom"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingRight="@dimen/album_title_padding"
-                android:textSize="@dimen/songs_count" />
+                android:layout_below="@+id/small_review"
+                android:text="@string/comment_button_card"
+                android:id="@+id/btnComment"
+                android:theme="@style/AppTheme"
+                android:typeface="normal"/>
 
-            <ImageView
+            <Button
+                style="@style/NextThemeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_share_card"
+                android:id="@+id/btnShare"
+                android:layout_below="@+id/small_review"
+                android:layout_toEndOf="@+id/btnComment"/>
+
+            <!--<ImageView
                 android:id="@+id/overflow"
                 android:layout_width="@dimen/ic_album_overflow_width"
                 android:layout_height="@dimen/ic_album_overflow_height"
@@ -53,7 +116,7 @@
                 android:layout_below="@id/thumbnail"
                 android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_dots" />
+                android:src="@drawable/ic_dots" /> !-->
 
         </RelativeLayout>
 

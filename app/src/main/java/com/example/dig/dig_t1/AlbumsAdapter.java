@@ -23,15 +23,20 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     private List<Album> albumList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, count;
+        public TextView title, count, namePerson, infoAboveName, locationPerson, smallReview;
         public ImageView thumbnail, overflow;
 
         public MyViewHolder(View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.title);
-            count = (TextView) view.findViewById(R.id.count);
+            title = (TextView) view.findViewById(R.id.small_review);
+            //count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            overflow = (ImageView) view.findViewById(R.id.overflow);
+            // overflow = (ImageView) view.findViewById(R.id.overflow);
+
+            namePerson = (TextView) view.findViewById(R.id.name_person);
+            infoAboveName = (TextView) view.findViewById(R.id.date_info);
+            locationPerson = (TextView) view.findViewById(R.id.location_info);
+            smallReview = (TextView) view.findViewById(R.id.small_review);
         }
     }
 
@@ -53,22 +58,29 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Album album = albumList.get(position);
         holder.title.setText(album.getName());
-        holder.count.setText(album.getNumOfSongs() + " songs");
+        //holder.count.setText(album.getNumOfSongs() + " songs");
+
+        holder.namePerson.setText("André Bon Odori");
+        holder.infoAboveName.setText("Há 3 minutos, 1km longe de você em:");
+        holder.locationPerson.setText("Choperia de Flango");
+        holder.smallReview.setText("Um ótimo local para passar as férias, descansar e voltar com todo gás para casa.");
+
 
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
 
-        holder.overflow.setOnClickListener(new View.OnClickListener() {
+        /*holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPopupMenu(holder.overflow);
+                //showPopupMenu(holder.overflow);
             }
-        });
+        });*/
     }
 
     /**
      * Showing popup menu when tapping on 3 dots
      */
+/*
     private void showPopupMenu(View view) {
         // inflate menu
         PopupMenu popup = new PopupMenu(mContext, view);
@@ -77,6 +89,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
         popup.show();
     }
+*/
 
     /**
      * Click listener for popup menu items

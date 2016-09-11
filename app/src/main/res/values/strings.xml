@@ -16,4 +16,9 @@
     <string name="action_play_next">Play Next</string>
 
     <string name="action_settings">Settings</string>
+    <string name="name_person_card"/>
+    <string name="info_above_name_card"/>
+    <string name="location_person_card"/>
+    <string name="comment_button_card">Comentar</string>
+    <string name="button_share_card">Compartilhar</string>
 </resources>
