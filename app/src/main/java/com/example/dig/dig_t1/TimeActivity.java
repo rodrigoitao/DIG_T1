@@ -57,7 +57,7 @@ public class TimeActivity extends AppCompatActivity
         albumList = new ArrayList<>();
         adapter = new AlbumsAdapter(this, albumList);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -131,16 +131,16 @@ public class TimeActivity extends AppCompatActivity
     private void prepareAlbums() {
         int[] covers = new int[]{
                 R.drawable.album1,
-                R.drawable.album2,
-                R.drawable.album3,
-                R.drawable.album4,
-                R.drawable.album5,
-                R.drawable.album6,
-                R.drawable.album7,
-                R.drawable.album8,
-                R.drawable.album9,
-                R.drawable.album10,
-                R.drawable.album11};
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1,
+                R.drawable.album1};
 
         Album a = new Album("True Romance", 13, covers[0]);
         albumList.add(a);
