@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#5d4037</color>
+    <color name="colorAccent">#ffc107</color>
+    <color name="accent">#8BC34A</color>
+    <color name="primary_text_material_light">#9e5a43</color>
+    <color name="secondary_text_material_light">#757575</color>
+    <color name="primary_text_material_dark">#757575</color>
+    <color name="album_title">#4c4c4c</color>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dig.dig_t1.RegisterActivity"
+    tools:showIn="@layout/activity_register"
+    android:background="@drawable/bg"
+    style="@style/Widget.AppCompat.Light.ActionButton"
+    android:baselineAligned="true">
+
+
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:text="Nome:"
+        style="@style/NextThemeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Digite o nome"
+        style="@style/NextThemeEditText"/>
+
+    <TextView
+        android:text="@string/email"
+        style="@style/NextThemeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/emailHint"
+        style="@style/NextThemeEditText"/>
+
+    <TextView
+        android:text="@string/senha"
+        style="@style/NextThemeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edt_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/senhaHint"
+        style="@style/NextThemeEditText"/>
+
+    <TextView
+        android:text="Repita a senha:"
+        style="@style/NextThemeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edt_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Digite a senha novamente"
+        style="@style/NextThemeEditText"/>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_marginTop="50dp"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar"
+        style="@style/NextThemeButton"/>
+
+</LinearLayout>

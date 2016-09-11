@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DIG_T1</string>
+    <string name="email">E-mail:</string>
+    <string name="senha">Senha:</string>
+    <string name="emailHint">Digite o e-mail</string>
+    <string name="senhaHint">Digite a senha</string>
+    <string name="login">Entrar</string>
+    <string name="pCadastrar">Cadastrar usando e-mail</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="title">Next</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
