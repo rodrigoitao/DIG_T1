@@ -110,9 +110,9 @@ public class TimeActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_friend) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_settings) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_logout) {
 
         }
 
