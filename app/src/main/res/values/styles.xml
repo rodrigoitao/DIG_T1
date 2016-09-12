@@ -23,6 +23,10 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <style name="NavTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:background">#212121</item>
+    </style>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="NextThemeButton" parent="Widget.AppCompat.Light.ActionButton">

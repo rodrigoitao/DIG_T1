@@ -8,6 +8,8 @@
     <string name="pCadastrar">Cadastrar usando e-mail</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="title">Next</string>
+    <string name="perfil">Perfil</string>
+    <string name="amigo">Amigos</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

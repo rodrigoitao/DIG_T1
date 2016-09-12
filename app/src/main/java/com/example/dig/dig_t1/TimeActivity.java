@@ -106,13 +106,9 @@ public class TimeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_account) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_friend) {
 
         } else if (id == R.id.nav_share) {
 
@@ -130,17 +126,17 @@ public class TimeActivity extends AppCompatActivity
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1,
-                R.drawable.album1};
+                R.drawable.bg_0,
+                R.drawable.bg_1,
+                R.drawable.bg_2,
+                R.drawable.bg_3,
+                R.drawable.bg_4,
+                R.drawable.bg_5,
+                R.drawable.bg_6,
+                R.drawable.bg_7,
+                R.drawable.bg_8,
+                R.drawable.bg_9,
+                R.drawable.bg_10};
 
         Album a = new Album("True Romance", 13, covers[0]);
         albumList.add(a);
