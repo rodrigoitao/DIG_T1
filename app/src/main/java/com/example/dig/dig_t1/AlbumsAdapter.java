@@ -1,13 +1,14 @@
 package com.example.dig.dig_t1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,9 +23,11 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     private Context mContext;
     private List<Album> albumList;
 
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count, namePerson, infoAboveName, locationPerson, smallReview;
         public ImageView thumbnail, overflow;
+        public Button btnComment;
 
         public MyViewHolder(View view) {
             super(view);
@@ -37,6 +40,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             infoAboveName = (TextView) view.findViewById(R.id.date_info);
             locationPerson = (TextView) view.findViewById(R.id.location_info);
             smallReview = (TextView) view.findViewById(R.id.small_review);
+            btnComment = (Button) view.findViewById(R.id.btnComment);
         }
     }
 
@@ -68,6 +72,17 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
+
+        // setando o listener do botão "Comentários'
+        holder.btnComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CommentActivity.class);
+
+                v.getContext().startActivity(intent);
+            }
+        });
+
 
         /*holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
